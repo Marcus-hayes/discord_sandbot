@@ -1,8 +1,6 @@
 import discord
 import youtube_dl
 import os
-import requests
-import json
 import asyncio
 from os.path import exists
 from keep_alive import keep_alive

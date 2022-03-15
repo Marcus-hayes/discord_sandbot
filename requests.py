@@ -1,4 +1,7 @@
-class Requests {
+import requests
+import json
+
+class Requests:
     def get_mom_joke():
         response = requests.get('https://api.yomomma.info/')
         json_data = json.loads(response.text)
@@ -10,4 +13,3 @@ class Requests {
         json_data = json.loads(response.text)
         insult = json_data['insult']
         return insult.lower()
-}
