@@ -6,6 +6,7 @@ from os.path import exists
 from keep_alive import keep_alive
 from discord.ext import commands, tasks
 from requests import Requests
+from dotenv import load_dotenv
 
 intents = discord.Intents().all()
 client = discord.Client(intents=intents)
@@ -211,4 +212,5 @@ async def on_ready():
 
 if __name__ == "__main__" :
   keep_alive()
-  bot.run(os.environ['MHB_TOKEN'])
+  load_dotenv()
+  bot.run(os.getenv('DISORD_TOKEN'))
